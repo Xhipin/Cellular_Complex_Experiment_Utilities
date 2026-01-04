@@ -1,2 +1,2 @@
-# Cellular_Complex_Experiment_Utilities
+# Cellular Complex Utilities
 A utility repository to generate experimental results of the time-varying cellular complex data
