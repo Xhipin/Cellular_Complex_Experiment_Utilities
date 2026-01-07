@@ -1,0 +1,30 @@
+# Example plot configuration for cellexp_util.
+
+args:
+  datasetName: synthetic_RFHORSO
+  experiment_name: test
+  Tstep: 1
+  N: 10
+
+sweeps:
+  test:
+    sweep_type: cartesian
+    vars: [std, nl]
+    values:
+      - [0.01, 0.04]
+      - [2, 4]
+
+plot_sweeps:
+  test:
+    - iterator: nl
+      legend: std
+      legend_name: "$\\nu = {}$"
+      iterator_values: [2, 4]
+      legend_values: [0.01, 0.04]
+
+table_sweeps:
+  test:
+    - column_var: std
+      row_var: nl
+      column_name: "$\\nu = {}$"
+      row_name: "$p_{}$"

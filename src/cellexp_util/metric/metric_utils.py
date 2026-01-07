@@ -1,6 +1,6 @@
 import os
 import pickle
-from ..registry.metric_registry import general_metric, synthetic_metric, GENERAL_METRICS, SYNTHETIC_METRICS
+from cellexp_util.registry.metric_registry import general_metric, synthetic_metric, GENERAL_METRICS, SYNTHETIC_METRICS
 
 import numpy as np
 
