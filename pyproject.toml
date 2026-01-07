@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cellexp-util"
+version = "0.1.0"
+description = "Utilities for cellular complex experiments"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Abdullah Canbolat", email = "your.email@example.com"}
+]
+keywords = ["cellular", "complex", "experiments"]
+dependencies = ["numpy"]
+
+
+[project.urls]
+Repository = "https://github.com/Xhipin/Cellular_Complex_Experiment_Utilities"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
