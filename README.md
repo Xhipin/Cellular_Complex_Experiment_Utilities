@@ -99,4 +99,29 @@ table_sweeps:
 - Output paths are provided explicitly in YAML (`base_path` + `path_template` for sweeps, or per-alg `path`).
 - The exact set of available metrics is defined by the metric utilities in this repo.
 
+## ROC/AUC (Usage)
+
+ROC curves use `pd_curve` / `pfa_curve` metrics (and their `*single` variants for per-trial data).
+AUC is computed by integrating PD vs PFA after tail-averaging and alignment.
+
+Example:
+
+```python
+from cellexp_util.plotter.plotter import Plotter, TableMaker
+from cellexp_util.plotter.implementations.roc_auc_plotter import (
+    render_roc_plot,
+    render_auc_table,
+    ROCPlotConfig,
+    AUCTableConfig,
+)
+
+plotter = Plotter("ablation.yaml")
+for job_data in plotter.iter_loaded():
+    render_roc_plot(job_data, config=ROCPlotConfig(output_dir="experiments/plots"))
+
+tables = TableMaker("ablation.yaml")
+for job_data in tables.iter_loaded():
+    render_auc_table(job_data, config=AUCTableConfig(output_dir="experiments/plots"))
+```
+
 ## TODO: Add cellular complex plotting and ROC/AUC utility
