@@ -98,3 +98,5 @@ table_sweeps:
 - Algorithm comparison uses plot/table sweeps with `legend: alg`.
 - Output paths are provided explicitly in YAML (`base_path` + `path_template` for sweeps, or per-alg `path`).
 - The exact set of available metrics is defined by the metric utilities in this repo.
+
+## TODO: Add cellular complex plotting and ROC/AUC utility
